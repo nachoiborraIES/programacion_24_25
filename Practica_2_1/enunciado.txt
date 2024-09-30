@@ -1,0 +1,27 @@
+Realiza los siguientes programas en lenguaje C#.
+
+Ejercicio 1
+
+Crea un programa en un archivo llamado Practica_2_1_1.cs que le pida al usuario las notas de sus tres últimos exámenes, y en función de los valores, muestre uno de estos mensajes:
+
+- "Has ido mejorando" si cada nota es mayor o igual que la anterior
+- "Has ido empeorando" si cada nota es menor o igual que la anterior
+- "Tienes altibajos" en otro caso
+
+Ejemplos de entradas y salidas que debe mostrar:
+
+6 8 9 --> Has ido mejorando
+8 8 7 --> Has ido empeorando
+6 9 5 --> Tienes altibajos
+
+Ejercicio 2
+
+Crea un programa en un archivo llamado Practica_2_1_2.cs que le pida al usuario un código numérico entero. Si es 5678 o 8765 le mostrará el saludo "Hola, señor". Si es 1234 o 4321 le mostrará el saludo "Hola, señora", y si es cualquier otro lo volverá a pedir hasta que sea uno de los códigos aceptados.
+
+Para entregar:
+
+Deberás entregar los archivos fuente (sin los ejecutables compilados) en un archivo ZIP llamado Practica_2_1.zip.
+
+IMPORTANTE:
+
+Echa un vistazo a las normas de calificación de trabajos para saber qué tienes que tener en cuenta a la hora de escribir tus programas.
