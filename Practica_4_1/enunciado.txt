@@ -1,0 +1,29 @@
+Queremos desarrollar un programa que gestione un conjunto de juegos de mesa. Crearemos para ello un archivo llamado Practica_4_1.cs que cumpla los requisitos que se detallan a continuación.
+
+Los datos de cada juego los guardaremos en un struct juegoMesa que tendrá los siguientes campos:
+
+- Nombre del juego (texto)
+- Precio (real)
+- Tipo de juego (enum que podrá valer ROL, INFANTIL, AZAR, PUZZLE y OTROS)
+- Información básica del juego: será otro struct con los siguientes campos:
+   - Edad mínima para jugar al juego (entero)
+   - Mínimo número de jugadores (0 para no limitar)
+   - Máximo número de jugadores (0 para no limitar)
+
+El programa creará un array sobredimensionado para almacenar hasta 50 juegos, y mostrará repetidamente al usuario un menú con estas opciones:
+
+1. Nuevo juego: le pediremos al usuario los datos del  juego (nombre, información básica, precio y tipo de juego) y lo añadiremos al final de los juegos existentes. Deberemos comprobar si el nuevo juego cabe, y que el precio es un valor válido (real mayor que 0). De lo contrario, no se añadirá nada al array y mostraremos un mensaje de error adecuado. Supondremos que el resto de datos sí serán válidos, y el tipo de juego se lo pediremos al usuario en forma numérica (por ejemplo 1 = ROL, 2 = INFANTIL, etc), para luego convertirlo al enum correspondiente.
+2. Borrar juego: si hay juegos en el array, los mostraremos numerados de 1 a N, le pediremos al usuario la posición del juego a borrar y, si es válida  (entre 1 y el número de juegos actual) y el usuario confirma la operación, eliminaremos el juego del array
+3. Juego más caro: mostraremos los datos del juego más caro del array (si hay juegos), o el mensaje "No hay juegos" si está vacío. Se deberá mostrar toda la información del juego, cada campo en una línea.
+4. Juegos por tipo: le pedirá al usuario un tipo de juego y, si es válido (contenido en el enum) mostrará los juegos de ese tipo. Si el tipo no es válido mostraremos "Tipo inválido" y volveremos al menú. Si no hay juegos de ese tipo mostraremos "No se encuentran juegos del tipo indicado" y volveremos al menú. Se deberá mostrar toda la información de los juegos, cada campo en una línea
+0. Salir
+
+Se valorará que se gestionen las opciones del menú a través de un tipo enumerado (enum) para facilitar posibles cambios futuros. También se valorará la usabilidad de la aplicación, es decir, que el usuario vea los mensajes apropiados de lo que tiene que hacer, y se le pida la información mínima imprescindible para completar la tarea.  Por ejemplo, para confirmar el borrado basta con que el usuario escriba S o N.
+
+Para entregar:
+
+Deberás entregar el archivo fuente (sin el ejecutable compilado) en un archivo ZIP llamado Practica_4_1.zip.
+
+IMPORTANTE:
+
+Echa un vistazo a las normas de calificación de trabajos para saber qué tienes que tener en cuenta a la hora de escribir tus programas.
