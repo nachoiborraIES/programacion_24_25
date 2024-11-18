@@ -1,0 +1,16 @@
+Para esta práctica tomaremos como base la solución propuesta para la práctica anterior (práctica 4.1), que puedes encontrar en el repositorio de GitHub del curso. Se pide ampliar la práctica con estas opciones adicionales en el menú:
+
+5. Ordenar juegos: se ordenará el array de juegos por nombre (alfabéticamente) y se mostrarán por pantalla los 5 primeros juegos del listado (o menos, si no hay 5 juegos en el array).
+
+6. Búsqueda avanzada: le pediremos al usuario un texto y mostraremos la información de los juegos cuyo nombre contenga ese texto (sin importar mayúsculas o minúsculas). 
+
+7. Filtrar juegos: le pediremos al usuario un precio y un tipo de juego y mostraremos todos los juegos del catálogo que sean del tipo indicado y tengan un precio igual o inferior al indicado. Como tipo de juego también admitiremos algún código especial que signifique "Cualquiera" (por ejemplo, el 0, si no está contemplado en "enum").
+
+Para entregar:
+
+Deberás entregar el archivo fuente en un archivo ZIP llamado Practica_4_2.zip.
+
+IMPORTANTE:
+
+Echa un vistazo a las normas de calificación de trabajos para saber qué tienes que tener en cuenta a la hora de escribir tus programas.
+Se debe partir como base de la solución publicada en GitHub, y añadir las opciones adicionales. Si se toma cualquier otro código como base (como por ejemplo, tu propia práctica), se calificará con un 0 esta entrega
