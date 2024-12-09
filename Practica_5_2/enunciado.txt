@@ -1,0 +1,34 @@
+Realiza los siguientes programas en lenguaje C#.
+
+Ejercicio 1
+
+Crea un programa en un archivo llamado Recursividad.cs que contenga los siguientes elementos: 
+
+- Una función recursiva llamada SumaNumeros que reciba como parámetro un número y devuelva la suma de los números desde 1 hasta ese número. Por ejemplo, si el número es 5, deberá devolver la suma de 1+2+3+4+5 = 15. Si el número es 0 o negativo la función debe devolver 0.
+- Una función recursiva llamada PalabraOrdenada que reciba como parámetro una palabra (string) y devuelva un booleano indicando si tiene las letras ordenadas ascendentemente o no. Por ejemplo, la palabra "hola" no tiene las letras ordenadas ascendentemente, pero la palabra "dino" sí. Se asume que las palabras de una letra están de por sí ordenadas, y la cadena vacía también lo está. Se asume también que dos letras iguales están ordenadas entre sí (por ejemplo, "aa").
+- Un programa principal Main que pruebe las dos funciones con al menos 3 casos diferentes cada una.
+
+Ejercicio 2
+
+Crea un programa en un archivo llamado Grafico.cs en el que le pasemos al programa principal (Main), a través de los args de entrada, una serie de valores numéricos. El programa deberá usar una expresión lambda para guardar los datos en un array numérico. Si alguno de los datos no es un número válido, o no hay datos de entrada, se mostrará el mensaje de "Datos de entrada inválidos".
+
+Si se ha podido procesar correctamente el array, se recorrerá con una expresión lambda para mostrar para cada número una línea de asteriscos de esa longitud. 
+
+Ejemplo de uso:
+
+Grafico 4 8 6 2 5
+****
+********
+******
+**
+*****
+
+Se deberá modularizar el código para no hacer todo el trabajo directamente en el Main.
+
+Para entregar:
+
+Deberás entregar los dos archivos fuente (sin los ejecutables compilados) en un archivo ZIP llamado Practica_5_2.zip.
+
+IMPORTANTE:
+
+Echa un vistazo a las normas de calificación de trabajos para saber qué tienes que tener en cuenta a la hora de escribir tus programas. Recuerda que también se incluye una penalización por la incorrecta modularización del código.
