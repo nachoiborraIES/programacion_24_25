@@ -1,0 +1,24 @@
+Se pide crear un proyecto en Visual Studio que adapte la práctica 5.1 como se explica a continuación. Aquí podéis encontrar posibles soluciones completas a esa práctica.
+
+Crearemos un proyecto Visual Studio llamado JuegosMesa con dos ficheros fuente:
+
+- Principal: donde colocaremos todo el contenido de la práctica 5.1, que luego modificaremos
+- JuegoMesa, donde definiremos una clase JuegoMesa que sustituirá a los structs del ejercicio anterior (los eliminaremos de la clase Principal). La clase JuegoMesa tendrá como atributos (privados) el nombre del juego, el precio, el tipo, la edad mínima para jugar, el número mínimo de jugadores y el número máximo. Todos los datos se le pasarán como parámetro al constructor, y definiremos getters/setters o bien propiedades get/set para leer/establecer el valor de los mismos. Para todos los datos numéricos, se deberá comprobar que el valor sea correcto y si no lo es, se dejará a un valor por defecto correcto: el precio se dejará a 1, el tipo en OTROS, y la edad mínima, mínimo de jugadores y máximo de jugadores a 0. Todo esto deberemos comprobarlo en los setters. Añadiremos también  un método Mostrar que mostrará toda la información del juego con este formato:
+nombre juego (tipo): precio, edad mínima, min jugadores, max jugadores
+
+Ejemplo: Monopoly (OTROS): 19.95, min 10 años, Jugadores 2-5
+
+En el programa principal se creará un array sobredimensionado de objetos de tipo JuegoMesa. En cuanto a las opciones del menú, de las que había en el ejercicio 5.1 dejaremos las siguientes:
+
+1. Insertar juego. Deberemos comprobar la validez del precio, como en versiones anteriores, y si es correcto se insertará en el array.
+2. Borrar juego, con el mismo funcionamiento que en versiones anteriores
+3. Juego más caro, con el mismo funcionamiento que en versiones anteriores.
+4. Juegos por tipo, con el mismo funcionamiento que en versiones anteriores.
+5. Ordenar juegos, con el mismo funcionamiento que en versiones anteriores
+0. Salir
+
+Deberás reutilizar/adaptar las funciones que hiciste en la práctica 5.1 para esta nueva versión, dejándolas todas en la clase Principal (salvo el método Mostrar, que corresponde a la clase JuegoMesa). Elimina los métodos que ya no necesites, de las funcionalidades que se han suprimido en esta práctica.
+
+Para entregar:
+
+Deberás entregar el proyecto Visual Studio comprimido con todos los archivos que contenga (comprime la carpeta entera), en un archivo llamado Practica_6_1.zip
