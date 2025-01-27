@@ -1,0 +1,46 @@
+Para agilizar los trámites en la Administración Pública, vamos a realizar un programa que permita agrupar y gestionar las solicitudes de los ciudadanos.
+
+Toda solicitud tendrá un identificador alfanumérico, y una fecha de solicitud (ambos strings). Las solicitudes pueden ser de tres tipos:
+
+- Cambios de domiciliación bancaria. Esto lo solicitarán otros empleados públicos para indicar dónde quieren cobrar su nómina mensual. En este caso añadiremos como atributo propio el número de cuenta (cadena con un total de 20 dígitos del 0 al 9)
+- Pago de tasas. En este caso indicaremos el concepto de la tasa (string) y el importe total a pagar (float)
+- Reserva de espacios públicos. Indicaremos el espacio a reservar (string), la fecha de reserva (string), la hora de inicio (string) y la duración en horas de la reserva (entero).
+- Además, cada solicitud llevará asociado el nombre del administrativo que la atendió. De cada administrativo guardaremos su nombre, DNI y teléfono de contacto.
+
+Se pide elaborar un proyecto Visual Studio llamado SolicitudesAdministracion con las siguientes clases:
+
+- Clase padre Solicitud, junto con las clases hijas (heredadas) SolicitudDomiciliacion, SolicitudTasas y SolicitudReserva, cada una con sus atributos respectivos, constructor parametrizado para darles valor y getters/setters (o bien propiedades get/set, si lo prefieres). Añadiremos también en cada clase una redefinición del método ToString para sacar la información de cada solicitud. Esta información deberá empezar por el tipo de solicitud, seguida del ID y la fecha, y luego el resto de información específica de cada solicitud. Por ejemplo, para un cambio de domiciliación bancaria podría quedar así:
+Cambio Domiciliación. ID A112B. Realizada el 08/01/2023. Núm cuenta 12344321123443210000
+- Clase Administrativo con los datos del personal administrativo. Estableceremos una asociación uno a muchos entre Administrativo y Solicitud, de forma que una solicitud la atiende un administrativo, y un administrativo puede atender varias solicitudes. En principio, será una asociación unidireccional, de forma que desde la solicitud podamos ver qué administrativo la atiende, pero no al revés.
+- Deberéis añadir en los ToString de las solicitudes el DNI del administrativo asignado, al final del texto de la solicitud, en la misma línea.
+
+Nuestro programa principal creará un array de administrativos predefinido (metido a mano desde el código), y un array sobredimensionado para gestionar hasta 20 solicitudes, y mostrará un menú con las siguientes opciones:
+
+1. Nueva solicitud: pediremos al usuario que especifique el tipo de solicitud (1, 2 o 3), y luego le pediremos los datos de esa solicitud en cuestión. Para elegir el administrativo que la llevará, mostraremos un listado de administrativos y el usuario elegirá uno buscando por DNI. Se asume que los datos son válidos, pero se deben realizar las siguientes comprobaciones:
+
+- El ID de la solicitud no debe existir en el array de solicitudes
+- El número de cuenta, en el caso de domiciliaciones bancarias, debe constar únicamente de 20 dígitos del 0 al 9
+- El importe a pagar en el caso de pago de tasas debe ser positivo (> 0)
+- El DNI del administrativo debe corresponderse con alguno de los administrativos dados de alta en el array
+
+Si algún dato no cumple los requisitos se mostrará el mensaje de "Datos incorrectos para la solicitud", especificando además qué datos han fallado (por ejemplo, "No se ha encontrado un administrativo con el DNI indicado"), y no se dará de alta en el array. En caso contrario se añadirá la nueva solicitud al array. Hay que tener en cuenta que a partir de la solicitud se deben poder obtener los datos completos del administrativo asignado (debe haber una asociación entre ambas clases).
+
+2. Solicitudes por administrativo: mostraremos el listado de administrativos, el usuario elegirá uno por su DNI y, si se encuentra, mostraremos todas las solicitudes que gestiona ese administrativo. Si el administrativo no se encuentra, mostraremos el mensaje de "No se ha encontrado un administrativo con el DNI indicado". Si se encuentra, pero no tiene solicitudes asignadas, mostraremos el mensaje de "El administrativo seleccionado no tiene solicitudes a su cargo".
+
+3. Listado de solicitudes: se mostrarán las solicitudes existentes en el array, una por línea, con el formato indicado por ToString. Las solicitudes de cambio de nómina se mostrarán en azul, las de pago de tasas en rojo y las de reserva de espacios en verde.
+
+4. Total pendiente de pago: para las solicitudes que sean de pago de tasas, se mostrará el total a pagar de todas ellas (suma de todos los importes)
+
+0. Salir
+
+Se valorará negativamente:
+
+- La repetición innecesaria de código en las clases hija por no utilizar adecuadamente la partícula base
+- La no modularidad de código en la clase principal para definir las distintas tareas a realizar
+
+Para entregar:
+
+- Diagrama de clases del proyecto. Las clases que se deben identificar están marcadas en rojo en el enunciado. Deberéis añadir en cada una sus atributos (con la visibilidad adecuada) y los métodos y constructores que se implementen en cada una. No es necesario añadir en el diagrama getters/setters o propiedades get/set.
+- Proyecto completo SolicitudesAdministracion con las clases indicadas implementadas, junto con el programa principal
+
+Deberás entregar el proyecto junto con el diagrama en un archivo llamado Practica_6_2.zip
