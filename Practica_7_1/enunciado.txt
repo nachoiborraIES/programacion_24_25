@@ -1,0 +1,16 @@
+En esta práctica vamos a adaptar la práctica 6.2 para trabajo con listas. Se pide utilizar el proyecto compartido en este repositorio GitHub, y hacer los siguientes cambios
+
+1. Listas de Administrativos y de Solicitudes
+
+Reemplazaremos el array de administrativos por una lista de administrativos, y el array de solicitudes por una lista de solicitudes. Ambas listas utilizarán genéricos para definirse. Adapta el resto del código del programa para dar de alta los administrativos y las solicitudes adecuadamente a las listas, recorrerlas y mostrarlas. Deberás también ajustar el funcionamiento de cada opción del menú para que utilice listas en lugar de arrays.
+
+2. Nuevas opciones de menú
+
+Además de las opciones del menú original, añadiremos estas dos nuevas, en dos números consecutivos respecto a las opciones ya existentes:
+
+- Ordenar solicitudes por ID: se ordenarán y mostrarán las solicitudes por ID (de menor a mayor)
+- Eliminar solicitud: le pediremos al usuario el ID de la solicitud y, si existe, la eliminaremos de la lista. Si no existe le diremos que "No se ha encontrado una solicitud con el ID indicado".
+
+Para entregar:
+
+Deberás entregar el proyecto Visual Studio comprimido con todos los archivos que contenga (comprime la carpeta entera), en un archivo llamado Practica_7_1.zip.
