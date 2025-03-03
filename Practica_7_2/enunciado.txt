@@ -1,0 +1,39 @@
+Se pide crear un proyecto en Visual Studio llamado VueltaCiclista que permita gestionar los resultados de las diferentes etapas de una vuelta ciclista. Para ello crearemos las siguientes clases y elementos...
+
+Clases (1,5 puntos)
+
+(0,5 puntos) Por un lado, tendremos una clase Ciclista que almacenará los datos relevantes de cada ciclista. En concreto almacenaremos el número de dorsal (entero), su nombre y el equipo para el que corre. Habrá un constructor que asigne todos los datos y un método ToString que saque toda la información en una línea, con el formato que quieras. Además, añade los getters/setters que puedas necesitar.
+
+(1 punto) Por otra parte tendremos la clase Etapa, que tendrá como información la fecha en la que tiene lugar (un string con el formato aaaa-mm-dd, por ejemplo 2022-07-30) y un array de ciclistas con el podio de esa etapa (los tres primeros ciclistas de la etapa). En el constructor asignaremos la fecha y crearemos un array vacío de 3 posiciones. Añadiremos métodos en la clase para poder rellenar correctamente las posiciones del array después de crear el objeto. El método ToString deberá mostrar la fecha de la etapa y, en tres líneas tabuladas, los nombres de los corredores. Por ejemplo:
+
+2022-07-30
+   Tadej Pogacar
+   Primoz Roglic
+   Enric Mas
+
+Programa principal (8,5 puntos)
+
+(0,5 puntos) En nuestra clase principal, crearemos una lista de ciclistas, con unos cuantos ciclistas (al menos 5 o 6) ya dados de alta directamente, desde el código, sin pedirle nada al usuario.
+
+(0,5 puntos) Después, crearemos un diccionario para almacenar las etapas. La clave del diccionario será la fecha de la etapa, y el valor será la propia etapa en sí. Inicialmente este diccionario estará vacío.
+
+(3 puntos) A continuación el usuario podrá ir introduciendo datos de etapas:
+
+Primero introducirá la fecha de la etapa. Deberemos comprobar que tiene el formato adecuado (aaaa-mm-dd), y que no está repetida en el diccionario de etapas. En caso contrario, mostraremos el mensaje de error correspondiente ("Fecha incorrecta" o "Fecha ya existente"). No tenemos que comprobar que el día y el mes sean correctos (por ejemplo, el usuario podrá introducir 2023-70-78)
+Si la fecha es correcta, le mostraremos repetidamente (3 veces) el listado de ciclistas para que elija qué ciclista ha quedado primero, segundo y tercero en esa etapa. El usuario elegirá al ciclista por su posición en la lista, que supondremos que es correcta, pero deberemos comprobar que no elija más de una vez a un ciclista de la lista (es decir, que, por ejemplo, el primero y el tercero no sean el mismo ciclista).
+Una vez se elijan correctamente a los ciclistas se añadirá la etapa al diccionario y se pasará a pedir la siguiente etapa. El proceso terminará cuando el usuario escriba una cadena vacía como fecha.
+(2 puntos) Al finalizar la introducción de etapas, se mostrará por pantalla un listado ordenado por fecha de cada etapa con el podio correspondiente.
+
+(2,5 puntos) Finalmente, se mostrará por pantalla también los nombres de los ganadores de las etapas, sin que haya repetidos. Es decir, mostraremos qué ciclistas han ganado al menos alguna etapa en la vuelta.
+
+Penalizaciones:
+
+No poner comentarios al inicio de cada fichero fuente (-0,5 puntos)
+No utilizar nombres de variables adecuados (-0,5 puntos)
+No respetar la longitud de línea máxima de 80 caracteres (-0,5 puntos)
+Repetición innecesaria de código (-0,5 puntos)
+Modularización incorrecta del código (-1 punto)
+Errores de ejecución graves del programa (-1 punto)
+Para entregar:
+
+Deberás entregar el proyecto Visual Studio comprimido en un archivo ZIP o similar llamado Practica_7_2.zip
