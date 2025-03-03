@@ -26,14 +26,6 @@ Una vez se elijan correctamente a los ciclistas se añadirá la etapa al diccion
 
 (2,5 puntos) Finalmente, se mostrará por pantalla también los nombres de los ganadores de las etapas, sin que haya repetidos. Es decir, mostraremos qué ciclistas han ganado al menos alguna etapa en la vuelta.
 
-Penalizaciones:
-
-No poner comentarios al inicio de cada fichero fuente (-0,5 puntos)
-No utilizar nombres de variables adecuados (-0,5 puntos)
-No respetar la longitud de línea máxima de 80 caracteres (-0,5 puntos)
-Repetición innecesaria de código (-0,5 puntos)
-Modularización incorrecta del código (-1 punto)
-Errores de ejecución graves del programa (-1 punto)
 Para entregar:
 
 Deberás entregar el proyecto Visual Studio comprimido en un archivo ZIP o similar llamado Practica_7_2.zip
