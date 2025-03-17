@@ -1,0 +1,46 @@
+En esta práctica vamos a adaptar la práctica 7.1 (cuya solución puedes consultar aquí) para utilizar ficheros de texto donde guardar y cargar las solicitudes. En concreto, se pide añadir los siguientes elementos:
+
+Carga de administrativos (2 puntos)
+
+Se añadirá un método estático en la clase Administrativo llamado CargarAdministrativos, que devolverá una lista de administrativos leída de un fichero de texto. Se proporciona en esta práctica un fichero de ejemplo, donde tenemos los datos de cada administrativo en una línea, separados por punto y coma:
+
+11223344A;Juan Pérez;611223344
+44332211B;Elisa López;644332211
+55667788C;Raquel Sánchez;655667788
+88776655D;Sergio Zamora;688776655
+
+El método leerá el fichero línea a línea, creará con cada línea un objeto Administrativo y lo añadirá a una lista, que será la que se devuelva finalmente. 
+
+Tendremos que eliminar también el código que crea una lista de administrativos en el programa principal, y sustituirlo por una llamada a este método.
+
+Carga de solicitudes (4 puntos)
+
+Del mismo modo, añadiremos ahora un método estático llamado CargarSolicitudes a la clase Solicitud. Devolverá un listado de solicitudes leído de un fichero de texto (se proporciona uno como ejemplo). En cada línea se indican los datos de una solicitud, con el siguiente formato (separados por punto y coma):
+
+- Tipo de solicitud: D para domiciliación, T para tasas, R para reserva de espacio
+- Datos básicos de la solicitud, separados por punto y coma: ID de la solicitud, fecha y DNI del administrativo que la atiende
+- Datos específicos de cada solicitud, separados también por punto y coma
+
+Aquí vemos un ejemplo con una solicitud de domiciliación y otra de pago de tasas:
+
+D;A111;01/02/2023;11223344A;12345678901234567890
+T;B122;03/01/2023;44332211B;Pago recibo basuras;69,95
+
+El programa principal deberá llamar a esta función al inicio, para tener las solicitudes cargadas en una lista antes de empezar.
+
+Guardado de solicitudes (4 puntos)
+
+Al finalizar el programa (al elegir la opción de Salir), se deberá guardar el listado de solicitudes de nuevo en el fichero original. Para ello, se pide:
+
+- Implementar un método AFichero en todos los tipos de solicitud, para que cada solicitud devuelva un string con los datos de la solicitud en el formato correcto (separados por punto y coma)
+- Implementar un método estático llamado GuardarSolicitudes en la clase Solicitud. Recibirá como parámetro la lista de solicitudes, y las guardará en el fichero original, con el formato adecuado (usando los métodos AFichero de cada solicitud).
+
+Consideraciones adicionales
+
+Recuerda copiar los dos ficheros de texto que se proporcionan en tu proyecto Visual Studio y marcarlos para que se copien en la carpeta de salida sólo si son posteriores a los que ya hay. De lo contrario, no se guardarán las nuevas solicitudes que añadas.
+
+Al iniciar el programa cada vez, deben poderse ver las solicitudes tal y como quedaron la vez anterior que se usó el programa.
+
+Para entregar:
+
+Deberás entregar el proyecto Visual Studio comprimido en un archivo ZIP o similar. El archivo ZIP se llamará Practica_8_1.zip
