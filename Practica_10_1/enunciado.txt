@@ -1,0 +1,34 @@
+Vamos a desarrollar un proyecto llamado Reformas que permitirá gestionar una empresa de reformas de hogar.
+
+Crearemos una clase llamada Reforma que almacenará los datos de las diferentes reformas:
+
+- DNI y nombre del cliente (dos strings) 
+- Fecha de inicio de la reforma (DateTime)
+- Fecha prevista de fin de reforma (DateTime) 
+- Precio o presupuesto estipulado en euros
+- Fecha real de fin de reforma (DateTime)
+- Indicador de si la reforma ya ha sido cerrada o no (booleano) 
+
+El constructor dará valor a los cinco primeros atributos (DNI, nombre, fecha inicial, fecha prevista de fin y precio). La fecha real se asignará igual a la fecha estimada, y el booleano se pondrá a "false" inicialmente. Desde el programa permitiremos luego modificar estos dos últimos valores, junto con el precio, con los correspondientes "setters". Además, puedes añadir los métodos o propiedades get/set que consideres.
+
+Programa principal:
+
+El programa creará inicialmente una lista vacía de objetos de tipo Reforma. Después, mostraremos al usuario un menú con estas opciones: 
+
+- Nueva reforma: pediremos al usuario los datos iniciales de la reforma: DNI del cliente, nombre del cliente, fecha de inicio, fecha prevista de fin y precio. Si el DNI que introduzca ya existe en la lista, mostraremos el mensaje de "Este cliente ya tiene una reforma registrada" y terminaremos este paso. De lo contrario, pediremos el resto de la información. Deberemos asegurarnos de que las fechas tienen el formato correcto y, en caso contrario, volverlas a pedir. El resto de datos asumiremos que son correctos.
+La comprobación de si el DNI del usuario existe en la lista de reformas deberá realizarse usando programación funcional
+
+- Cerrar reforma: pediremos al usuario el DNI del cliente y, si se encuentra en la lista, pediremos que escriba la fecha real del fin de la reforma (también verificaremos que sea correcta). Marcaremos la reforma como cerrada (booleano a true) y, si la fecha real de fin de reforma es posterior a la fecha estimada, descontaremos 100 euros del presupuesto por cada día de demora. En ningún caso el precio final podrá ser negativo. Tampoco se podrá volver a cerrar una reforma que ya ha sido cerrada previamente, es decir, si el usuario escribe un DNI cuya reforma ya  ha sido cerrada, avisaremos con un mensaje de "Esta reforma ya ha sido cerrada".
+Nuevamente, la búsqueda del DNI en la lista deberá hacerse con programación funcional, compartiendo el código con el caso anterior.
+
+- Ver reforma: pediremos al usuario un DNI y mostraremos los datos de la reforma asociada, o el mensaje "Reforma no encontrada" si no existe en la lista. Buscaremos, nuevamente, al usuario por su DNI usando programación funcional
+
+- Total de reformas cerradas: usando programación funcional, mostraremos la suma de los precios de las reformas que hayan sido cerradas. Si no hay reformas cerradas, mostraremos 0 euros.
+
+- Salir
+
+Para las opciones 1 a 3, puede resultar interesante definir una función BuscarReforma, que reciba como parámetro el DNI de un cliente y, usando programación funcional, filtre la reforma que tenga ese DNI. Puede devolver el objeto Reforma encontrado, o null si no se ha encontrado. Esta función puede utilizarse en cada opción del menú (1 a 3) para dar un mensaje de error o continuar el proceso correspondiente.
+
+Para entregar:
+
+El proyecto comprimido en un fichero ZIP o similar, llamado Practica_10_1.zip.
